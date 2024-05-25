@@ -8,17 +8,132 @@
   </head>
   <body>
     <main id="main">
-      <div class="input-div">
-        <input
-          class="email fade-in"
-          name="email"
-          aria-required="true"
-          type="email"
-          placeholder="Trouve ton prochain livre"
-          required
-        />
+      <nav id="nav">
+        <ul>
+          <div>
+            <a class="logo" href=""><li>Lecteur</li></a>
+          </div>
+          <div>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>top 100</li></a>
+            <a href=""><li>catégories</li></a>
+            <a href=""><li>About</li></a>
+          </div>
+          <div>
+            <a onkeyup="myFunction()" class="searchBtn" href="#"
+              ><li><img src="/search.png" alt="" class="iconSearch" /></li
+            ></a>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="flex-center">
+        <div id="myModal" class="modal">
+          <!-- modal content -->
+          <div class="modelContent flex">
+            <!-- input -->
+            <form action="/search">
+              <div class="easyInput">
+                <input class="modalInput" type="text" name="" id="modalInput" />
+                <img class="icon search" src="/search.png" alt="" />
+              </div>
+              <span class="close"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0,0,256,256"
+                >
+                  <g fill="grey" fill-rule="nonzero">
+                    <g transform="scale(5.12,5.12)">
+                      <path
+                        d="M7.71875,6.28125l-1.4375,1.4375l17.28125,17.28125l-17.28125,17.28125l1.4375,1.4375l17.28125,-17.28125l17.28125,17.28125l1.4375,-1.4375l-17.28125,-17.28125l17.28125,-17.28125l-1.4375,-1.4375l-17.28125,17.28125z"
+                      ></path>
+                    </g>
+                  </g></svg
+              ></span>
+            </form>
+          </div>
+        </div>
       </div>
+      <section id="profil">
+        <div class="profilImage flex">
+          <div class="peopleProfile">
+            <h3 class="h3">Naval Ravikant</h3>
+            <div class="profileImage">
+              <img
+                src="https://pbs.twimg.com/media/Dg8cyzTVQAAhRoH.jpg"
+                alt=""
+              />
+            </div>
+            <p>
+              Naval Ravikant is an angel investor, podcaster, and entrepreneur.
+              He is best known for being the CEO, chairman, and founder of
+              AngelList.
+            </p>
+            <div class="topics flex">
+              <div>
+                <a href=""
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.36 12C14.44 11.34 14.5 10.68 14.5 10C14.5 9.32 14.44 8.66 14.36 8H17.74C17.9 8.64 18 9.31 18 10C18 10.69 17.9 11.36 17.74 12M12.59 17.56C13.19 16.45 13.65 15.25 13.97 14H16.92C15.9512 15.6683 14.4141 16.932 12.59 17.56ZM12.34 12H7.66C7.56 11.34 7.5 10.68 7.5 10C7.5 9.32 7.56 8.65 7.66 8H12.34C12.43 8.65 12.5 9.32 12.5 10C12.5 10.68 12.43 11.34 12.34 12ZM10 17.96C9.17 16.76 8.5 15.43 8.09 14H11.91C11.5 15.43 10.83 16.76 10 17.96ZM6 6H3.08C4.03864 4.32703 5.57466 3.06124 7.4 2.44C6.8 3.55 6.35 4.75 6 6ZM3.08 14H6C6.35 15.25 6.8 16.45 7.4 17.56C5.57827 16.9323 4.04429 15.6682 3.08 14ZM2.26 12C2.1 11.36 2 10.69 2 10C2 9.31 2.1 8.64 2.26 8H5.64C5.56 8.66 5.5 9.32 5.5 10C5.5 10.68 5.56 11.34 5.64 12M10 2.03C10.83 3.23 11.5 4.57 11.91 6H8.09C8.5 4.57 9.17 3.23 10 2.03ZM16.92 6H13.97C13.6565 4.76161 13.1931 3.56611 12.59 2.44C14.43 3.07 15.96 4.34 16.92 6ZM10 0C4.47 0 0 4.5 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C3.85752 17.9997 4.95991 18.7363 6.17317 19.2388C7.38642 19.7413 8.68678 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17317C18.7363 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0Z"
+                      fill="#444444"
+                    />
+                  </svg>
+                </a>
+                <a href="">
+                  <svg
+                    width="25"
+                    height="21"
+                    viewBox="0 0 25 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M12.5003 0.833374C13.5334 0.833374 14.5932 0.859957 15.6202 0.903457L16.8334 0.961457L17.9946 1.03033L19.0821 1.10404L20.0754 1.18137C21.1533 1.26388 22.1675 1.72385 22.9398 2.48038C23.712 3.23691 24.1927 4.24153 24.2973 5.3175L24.3456 5.83104L24.4362 6.93062C24.5208 8.07008 24.5837 9.31225 24.5837 10.5C24.5837 11.6878 24.5208 12.93 24.4362 14.0695L24.3456 15.169C24.3299 15.3455 24.3142 15.5158 24.2973 15.6826C24.1926 16.7587 23.7118 17.7635 22.9393 18.5201C22.1668 19.2766 21.1523 19.7365 20.0742 19.8187L19.0833 19.8948L17.9958 19.9697L16.8334 20.0386L15.6202 20.0966C14.5809 20.1418 13.5407 20.1652 12.5003 20.1667C11.46 20.1652 10.4198 20.1418 9.38041 20.0966L8.16724 20.0386L7.00603 19.9697L5.91853 19.8948L4.92528 19.8187C3.84739 19.7362 2.83312 19.2762 2.0609 18.5197C1.28868 17.7632 0.807978 16.7586 0.703367 15.6826L0.655034 15.169L0.564409 14.0695C0.472017 12.8818 0.422845 11.6912 0.416992 10.5C0.416992 9.31225 0.479825 8.07008 0.564409 6.93062L0.655034 5.83104C0.670742 5.65462 0.68645 5.48425 0.703367 5.3175C0.807937 4.24172 1.28846 3.23725 2.06044 2.48075C2.83241 1.72424 3.8464 1.26415 4.92408 1.18137L5.91612 1.10404L7.00362 1.03033L8.16603 0.961457L9.3792 0.903457C10.419 0.858306 11.4596 0.834939 12.5003 0.833374ZM10.0837 7.56983V13.4302C10.0837 13.9885 10.6878 14.3365 11.1712 14.0586L16.2462 11.1284C16.3566 11.0648 16.4483 10.9733 16.5121 10.8629C16.5759 10.7526 16.6095 10.6275 16.6095 10.5C16.6095 10.3726 16.5759 10.2474 16.5121 10.1371C16.4483 10.0268 16.3566 9.93528 16.2462 9.87171L11.1712 6.94271C11.0609 6.87905 10.9358 6.84556 10.8085 6.84558C10.6812 6.8456 10.5562 6.87914 10.446 6.94282C10.3357 7.00651 10.2442 7.0981 10.1806 7.20838C10.117 7.31866 10.0836 7.44374 10.0837 7.57104V7.56983Z"
+                      fill="#444444"
+                    />
+                  </svg>
+                </a>
+                <a href=""
+                  ><svg
+                    width="25"
+                    height="18"
+                    viewBox="0 0 25 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25 2.13125C24.0807 2.49214 23.093 2.73599 22.0548 2.84621C23.1139 2.28438 23.9264 1.39287 24.3097 0.33164C23.3188 0.8525 22.221 1.23095 21.0528 1.43384C20.1169 0.55208 18.7847 0 17.3093 0C14.4774 0 12.1807 2.03468 12.1807 4.54536C12.1807 4.9004 12.227 5.24569 12.3128 5.57928C8.04853 5.38908 4.2709 3.57971 1.74073 0.83104C1.30032 1.50406 1.04708 2.28438 1.04708 3.11542C1.04708 4.69167 1.95323 6.08356 3.32841 6.89802C2.48723 6.87363 1.69669 6.66977 1.00524 6.32936V6.38788C1.00524 8.5894 2.7724 10.426 5.11979 10.8435C4.68819 10.9469 4.23567 11.0015 3.76882 11.0015C3.43852 11.0015 3.11591 10.9742 2.80322 10.9215C3.45613 12.726 5.34991 14.0409 7.59491 14.076C5.83877 15.2952 3.6268 16.0219 1.22434 16.0219C0.810356 16.0219 0.401878 16.0004 0 15.9585C2.27032 17.2489 4.96564 18 7.86136 18C17.2972 18 22.4556 11.0766 22.4556 5.07207C22.4556 4.87699 22.45 4.67996 22.4401 4.48488C23.442 3.84307 24.3119 3.04422 24.9978 2.13417L25 2.13125Z"
+                      fill="#444444"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="topics flex">
+              <div>Engineer</div>
+              <div>Entrepreneur</div>
+
+              <div>Writer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="firstSection">
+        <!-- <div class="recommendedText">
+          196 livres recommandés par Naval Ravikant
+        </div> -->
+
         <div class="flex">
           <div class="bgBook">
             <a href=""
@@ -77,7 +192,36 @@
             <button class="btnBook">Voir sur Amazon</button>
           </div>
         </div>
+        <div class="flex bigDivOfBook">
+          <div class="bgBook">
+            <a href=""
+              ><img class="peopleImage"
+              src=https://images.squarespace-cdn.com/content/v1/5ed4753d946fb3475c5d1bc5/1633324249054-4NQM81WB9JOACZOE7PMB/BooksReadBy_OneBladeofGrass.jpg?format=2500w"
+              alt="naval ravikant" /></a
+            >
+          </div>
+          <div class="historyOfTheBook">
+            <h3>One Blade of Grass</h3>
+            <p>
+              Tout le monde. Il s'agit d'un plan simple et honnête pour établir
+              une relation plus significative avec notre âme et notre esprit.
+            </p>
+            <p>
+              L'un des guides spirituels les plus doués du XXe siècle, de Mello
+              utilise l'humour, la compassion et la perspicacité pour aider ses
+              lecteurs à comprendre l'importance de la "conscience" pour se
+              comprendre soi-même et comprendre le monde qui nous entoure.
+            </p>
+            <p>
+              Awareness est un guide spirituel complet et plein de sagesse qui
+              aborde les grandes questions de la vie - l'amour, la colère et la
+              peur, le changement, la souffrance, le bonheur et la perte.
+            </p>
+            <button class="btnBook">Voir sur Amazon</button>
+          </div>
+        </div>
       </section>
     </main>
+    <script src="/people/index.js"></script>
   </body>
 </html>
